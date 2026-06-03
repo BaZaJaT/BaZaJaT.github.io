@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archív légifelvételek tematikus osztályozása gépi tanulással</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- NAV -->
+<nav class="flex flex-col sm:flex-row sm:justify-between sm:items-center p-6 bg-gray-800 gap-4 sm:gap-0">
+  <h1 class="text-2xl sm:text-3xl font-bold text-center sm:text-left">
+    Gacsályi Bence Ádám
+  </h1>
+  <div class="flex flex-wrap justify-center sm:justify-end gap-3 sm:space-x-4">
+    <a href="../index.html" class="hover:text-gray-300">Főoldal</a>
+    <a href="../projects.html" class="hover:text-gray-300">Projektek</a>
+    <a href="../aboutme.html" class="hover:text-gray-300">Magamról</a>
+    <a href="../contact.html" class="hover:text-gray-300">Kapcsolat</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative h-[60vh] flex items-center justify-center">
+
+  <img src="../images/ML.PNG/"
+       class="absolute w-full h-full object-cover opacity-40">
+
+  <div class="relative text-center px-4">
+
+    <h1 class="text-5xl font-bold mb-4">Archív légifelvételek tematikus osztályozása gépi tanulással</h1>
+
+    <p class="text-gray-200 mb-6">
+      Pánkromatikus légifényképek tematikus osztályozása gépi tanulás segítségével
+    </p>
+
+    <!-- SKILL TAGS -->
+    <div class="mt-12">
+      <p class="text-sm text-gray-200 mb-3">Projekt kulcsszavak</p>
+
+      <div class="flex flex-wrap justify-center gap-3">
+
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">
+          Fotogrammetria
+        </span>
+
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">
+          Agisoft Metashape
+        </span>
+
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">
+          QGIS
+        </span>
+
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">
+
+        </span>
+
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">
+          SfM
+        </span>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECT INFO -->
+<section class="px-10 py-6 max-w-5xl mx-auto">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+    <div class="border-l-2 border-emerald-500 pl-4 py-1">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Helyszín</h3>
+      <p class="text-base font-semibold text-white mt-1">Debrecen</p>
+    </div>
+    <div class="border-l-2 border-blue-500 pl-4 py-1">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Adatforrás</h3>
+      <p class="text-base font-semibold text-white mt-1">Fentről.hu: digitalizált légifelvételek, ortofotók</p>
+    </div>
+    <div class="border-l-2 border-sky-500 pl-4 py-1">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Szoftver</h3>
+      <p class="text-base font-semibold text-white mt-1">Agisoft Metashape, QGIS</p>
+    </div>
+  </div>
+</section>
+
+<!-- DESCRIPTION -->
+<section class="px-10 py-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl mb-6">Projekt bemutatás</h2>
+
+  <!--kepek-->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-2">
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_MLfirst.png" alt="A legelső működő modellem. Nagyon rossz eredményeket adott, kevés volt a tanuló adat, de a sajátom." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        A legelső "működő" modellem. Nagyon rossz eredményeket adott, kevés volt a tanuló adat, de a sajátom.
+      </div>
+    </div>
+
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_ML.png" alt="Egy későbbi modell alkalmazásának az eredménye (fehér) és a tanítóterületek (rózsaszín)" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        Egy későbbi modell alkalmazásának az eredménye (fehér) és a tanítóterületek (rózsaszín)
+      </div>
+    </div>
+
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_ML1.png" alt="A tanítóterületek megadása kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        A tanítóterületek megadása kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)
+      </div>
+    </div>
+
+  </div>
+  <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4">
+
+    <button id="closeModal" class="absolute top-5 right-5 text-white text-4xl font-bold hover:text-gray-300 z-50 transition">&times;</button>
+
+    <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl font-bold bg-black bg-opacity-30 hover:bg-opacity-60 px-4 py-2 rounded transition z-50">&lsaquo;</button>
+
+    <div class="max-w-8xl max-h-[90vh] flex flex-col items-center justify-center">
+      <img id="modalImage" src="" alt="Nagyított kép" class="max-w-full max-h-[90vh] rounded-t-lg shadow-2xl object-contain select-none">
+
+      <div id="modalCaption" class="w-full bg-gray-900 bg-opacity-80 text-gray-200 text-center py-3 px-4 rounded-b-lg text-sm sm:text-base tracking-wide border-t border-gray-800">
+      </div>
+    </div>
+
+    <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl font-bold bg-black bg-opacity-30 hover:bg-opacity-60 px-4 py-2 rounded transition z-50">&rsaquo;</button>
+  </div>
+
+  <p class="text-gray-300 leading-relaxed mb-6">
+    Feltöltés alatt
+  </p>
+
+</section>
+
+<!-- RESULTS -->
+<section class="p-10 bg-gray-800">
+  <h2 class="text-3xl mb-6 text-center">Eredmények</h2>
+  <h3 class="text-xl mb-3 text-center"></h3>
+  <div class="max-w-5xl mx-auto mb-6">
+    <p class="mb-6 text-center">
+
+    </p>
+    <p class="mb-6 text-center">
+      Amennyiben szeretne több információt megtudni erről a projektemről, bátran keressen az elérhetőségeim egyikén:
+    </p>
+  </div>
+  <div class="flex justify-center gap-4">
+    <a href="../contact.html" class="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700">
+      Kapcsolat
+    </a>
+  </div>
+</section>
+
+
+<!-- WORKFLOW -->
+<section class="p-10 max-w-4xl mx-auto">
+  <h2 class="text-3xl mb-6">Feldolgozási munkafolyamat</h2>
+
+  <div class="space-y-6">
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">1. Előfeldolgozás</h3>
+      <p class="text-gray-400"></p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">2. Vizuális interpretáció</h3>
+      <p class="text-gray-400"></p>
+    </div>
+
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">3. Modell tanítása</h3>
+      <p class="text-gray-400"></p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">4. Validáció</h3>
+      <p class="text-gray-400"></p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">5. Finomhangolás</h3>
+      <p class="text-gray-400"></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-gray-800 p-12 text-center">
+  <h2 class="text-3xl font-semibold mb-6">Kapcsolat</h2>
+
+  <!-- Email -->
+  <a href="mailto:gacsalyib@gmail.com"
+     class="text-gray-400 hover:text-white transition">
+    gacsalyib@gmail.com
+  </a>
+
+  <!-- Social ikonok -->
+  <div class="flex justify-center gap-6 mt-6">
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/bence-g-5a5a9539b" target="_blank"
+       class="text-gray-400 hover:text-white transition">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM7.5 7h4.8v2.3h.1c.7-1.3 2.4-2.6 4.9-2.6C21 6.7 24 9 24 14v10h-5v-9c0-2.2-.8-3.7-2.8-3.7-1.5 0-2.4 1-2.8 2-.1.3-.2.8-.2 1.3v9h-5V7z"/>
+      </svg>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/BaZaJaT" target="_blank"
+       class="text-gray-400 hover:text-white transition">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.3-1.5-1.3-1.5-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.1-1.3-5.1-5.8 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.8.8 1.3 1.9 1.3 3.2 0 4.5-2.6 5.5-5.1 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.3 5.6 18.3.5 12 .5z"/>
+      </svg>
+    </a>
+
+  </div>
+</section>
+<script src="kep.js"></script>
+
+</body>
+</html>
