@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digitális topográfiai modellek</title>
+  <title>Digitális felszínmodellek</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white">
@@ -79,19 +79,19 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
     <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
       <div class="aspect-video overflow-hidden">
-        <img src="../images/workflow_screenshot_ffm.png" alt="kép1" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+        <img src="../images/workflow_screenshot_ffm.png" alt="Az első sikeres nDSM térképem. A vízszintes pontosság eléggé gyatra (az interpolálás miatti elmosódások miatt), de a függőleges pontossága meglepően jó lett (<1m).  " class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-
+        Az első sikeres nDSM térképem. A vízszintes pontosság eléggé gyatra (az interpolálás miatti "elmosódások" miatt), de a függőleges pontossága meglepően jó lett (<1m).
       </div>
     </div>
 
     <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
       <div class="aspect-video overflow-hidden">
-        <img src="../images/workflow_screenshot_demhiba.png" alt="" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+        <img src="../images/workflow_screenshot_demhiba.png" alt="A digitalizált felvételek sajátossága, a szkennelési hibák, egyéb zaj miatt anomáliák jelennek meg, ezeket maszkolással, küszöböléssel szoktam szűrni." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-        A digitalizált felvételek sajátossága
+        A digitalizált felvételek sajátossága, a szkennelési hibák, egyéb zaj miatt anomáliák jelennek meg, ezeket maszkolással, küszöböléssel szoktam szűrni.
       </div>
     </div>
 
@@ -124,6 +124,9 @@
   <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
     Feltöltés alatt
   </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
+
+  </p>
 </section>
 
 <!-- RESULTS -->
@@ -149,37 +152,34 @@
 <!-- WORKFLOW -->
 <section class="p-10 max-w-4xl mx-auto">
   <h2 class="text-3xl mb-6">Feldolgozási workflow</h2>
-  <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
-    Feltöltés alatt
-  </p>
 
-  <!--<div class="space-y-6">
+  <div class="space-y-6">
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">1. </h3>
-      <p class="text-gray-400"></p>
+      <h3 class="text-xl mb-2">1. Fotogrammetriai feldolgozás </h3>
+      <p class="text-gray-400">Kameraparaméterek megadása, kamerahelyzetek visszaállítása, relatív és abszolút tájékozás</p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">2. </h3>
-      <p class="text-gray-400"></p>
+      <h3 class="text-xl mb-2">2. Pontfelhő generálás</h3>
+      <p class="text-gray-400">Metashapeben, depth map alapján</p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">3. </h3>
-      <p class="text-gray-400"></p>
+      <h3 class="text-xl mb-2">3. Pontfelhő osztályozás</h3>
+      <p class="text-gray-400">A földi pontok szétválogatása</p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">4. </h3>
-      <p class="text-gray-400"></p>
+      <h3 class="text-xl mb-2">4. DTM, DSM előállítása</h3>
+      <p class="text-gray-400">Metashapeben, domborzat és felszínmodell létrehozása </p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">5. </h3>
-      <p class="text-gray-400"></p>
+      <h3 class="text-xl mb-2">5. Tisztítási és analitikai műveletek</h3>
+      <p class="text-gray-400">QGIS, resampling, cliping, keresőablakos műveletek, stb...</p>
     </div>
 
-  </div>-->
+  </div>
 </section>
 
 <!-- CONTACT -->

@@ -43,11 +43,12 @@
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Fotogrammetria</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Agisoft Metashape</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">QGIS</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">ortofotó, ortomozaik</span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Ortofotó, ortomozaik</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">DSM</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">DTM</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">nDSM</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">épületkinyerés</span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Épületkinyerés</span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Neurális hálózat</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">UNet</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">GeoAI</span>
 
@@ -83,10 +84,10 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-2">
     <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
       <div class="aspect-video overflow-hidden">
-        <img src="../images/workflow_screenshot_MLfirst.png" alt="A legelső működő modellem. Nagyon rossz eredményeket adott, kevés volt a tanuló adat, de a sajátom." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+        <img src="../images/workflow_screenshot_MLfirst.png" alt="A legelső működő modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-        A legelső "működő" modellem. Nagyon rossz eredményeket adott, kevés volt a tanuló adat, de a sajátom.
+        A legelső "működő" modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt.
       </div>
     </div>
 
@@ -104,7 +105,7 @@
         <img src="../images/workflow_screenshot_ML1.png" alt="A tanítóterületek megadása kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-        A tanítóterületek megadása kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)
+        A címkézés kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)
       </div>
     </div>
 
@@ -128,7 +129,12 @@
   <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
     Feltöltés alatt
   </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
+    Már az első ortomozaikom elkészítésekor megvolt az ötlet, hogy de menő lenne automatizáltan osztályozni a fekete-fehér légifényképek tartalmát, és ezzel <a href="proj_debchangedet.html" class="text-blue-400 hover:underline">a városok szerkezetének változását</a> detektálni.
+  </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
 
+  </p>
 </section>
 
 <!-- RESULTS -->
