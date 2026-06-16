@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archív légifelvételek tematikus osztályozása gépi tanulással</title>
+  <title>Épületkontúrok meghatározása archív légifelvételekből gépi tanulás segítségével</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white">
@@ -22,36 +22,36 @@
 </nav>
 
 <!-- HERO -->
-<section class="relative h-[60vh] flex items-center justify-center">
+<section class="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center py-12 md:py-0">
 
-  <img src="../images/ML.PNG"
+  <img alt="borítokép_ML" src="../images/ML.PNG"
        class="absolute w-full h-full object-cover opacity-40">
 
-  <div class="relative text-center px-4">
+  <div class="relative text-center px-4 max-w-4xl mx-auto">
 
-    <h1 class="text-5xl font-bold mb-4">Archív légifelvételek tematikus osztályozása gépi tanulással</h1>
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 break-words">
+      Épületkontúrok meghatározása archív légifelvételekből gépi tanulás segítségével
+    </h1>
 
-    <p class="text-gray-200 mb-6">
-      Pánkromatikus légifényképek tematikus osztályozása gépi tanulás segítségével
+    <p class="text-sm md:text-base text-gray-200 mb-6 max-w-2xl mx-auto">
+      Pánkromatikus légifényképek elemzése gépi tanulás segítségével
     </p>
 
-    <!-- SKILL TAGS -->
     <div class="mt-6">
-      <p class="text-sm text-gray-200 mb-3">Projekt kulcsszavak</p>
+      <p class="text-xs md:text-sm text-gray-200 mb-3 tracking-wide">Projekt kulcsszavak</p>
 
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Fotogrammetria</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Agisoft Metashape</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">QGIS</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Ortofotó, ortomozaik</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">DSM</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">DTM</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">nDSM</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Épületkinyerés</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Neurális hálózat</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">UNet</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">GeoAI</span>
-
+      <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">Fotogrammetria</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">Agisoft Metashape</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">QGIS</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">Ortofotó, ortomozaik</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">DSM</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">DTM</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">nDSM</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">Épületkontúr kinyerés</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">Neurális hálózat</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">UNet</span>
+        <span class="bg-gray-800/80 px-3 py-1 md:px-4 rounded-full text-xs md:text-sm text-gray-200">GeoAI</span>
       </div>
     </div>
 
@@ -81,13 +81,13 @@
   <h2 class="text-3xl mb-6">Projekt bemutatás</h2>
 
   <!--kepek-->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-2">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
     <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
       <div class="aspect-video overflow-hidden">
-        <img src="../images/workflow_screenshot_MLfirst.png" alt="A legelső működő modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+        <img src="../images/workflow_screenshot_MLfirst.png" alt="A legelső működő modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt, mivel addig semmilyen tapasztalatom nem volt neurális hálózatokkal." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-        A legelső "működő" modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt.
+        A legelső "működő" modellem. Nagyon rossz eredményeket adott, kevés és rossz minőségű is volt a tanuló adat, egy nagyon gyenge számítógépen volt futtatva az egész, de mégis nagy előrelépés volt, mivel addig semmilyen tapasztalatom nem volt neurális hálózatokkal.
       </div>
     </div>
 
@@ -102,7 +102,7 @@
 
     <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col">
       <div class="aspect-video overflow-hidden">
-        <img src="../images/workflow_screenshot_ML1.png" alt="A tanítóterületek megadása kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+        <img src="../images/workflow_screenshot_ML1.png" alt=" A címkézés kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)" class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
         A címkézés kézzel történik, többféle adat alapján (ortofotók, felszínmodellek, mai műholdas képek, OSM building adatok)
@@ -126,25 +126,68 @@
     <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl font-bold bg-black bg-opacity-30 hover:bg-opacity-60 px-4 py-2 rounded transition z-50">&rsaquo;</button>
   </div>
 
-  <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
-    Feltöltés alatt
-  </p>
   <p class="text-gray-300 leading-relaxed mb-2">
     Már az első ortomozaikom elkészítésekor megvolt az ötlet, hogy de menő lenne automatizáltan osztályozni a fekete-fehér légifényképek tartalmát, és ezzel <a href="proj_debchangedet.html" class="text-blue-400 hover:underline">a városok szerkezetének változását</a> detektálni.
+    Az egyetlen célom ekkor az volt, hogy kb 2-5 m vízszintes pontossággal tudjam meghatározni az épületek helyzetét.
   </p>
   <p class="text-gray-300 leading-relaxed mb-2">
-
+    Rövidebb gondolkodás után jött az ötlet, hogy ha manapság ekkora trend az AI, akkor biztos van valmiféle formája, hogy a technológiát GIS környezetben is használni lehessen. Több plugin kipróbálása után, találtam meg <a href="https://opengeoai.org/" class="text-blue-400 hover:underline">Qiusheng Wu GeoAI </a> nevű pluginját, amely tökéletes eszköznek bizonyult számomra.
+  </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
+    A projekt közben a legnagyob kihívást a sávok hiánya jelentette. Míg egy 3 sávos RGB képnél rendelkezésre áll spektrális információ is, ebben az esetben csak intenzitásértékkel lehet dolgozni. Vagy mégsem?
+  </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
+    Miután jobban beleástam magam, hogy hogyan lehet légifényképekből megfelelő digitális felszínmodelleket készíteni, jött az ötlet, hogy akkor hogyan lehet "segítő" sávokat hozzárakni a fényképekhez.
+    Jelenleg 2 sávval dolgozok, intenzitás és nDSM. A jövőben tervezem ezt kiegészíteni egyéb sávokkal is. (lejtés, görbület, éldetektor, stb...)
   </p>
 </section>
 
 <!-- RESULTS -->
 <section class="p-10 bg-gray-800">
-  <h2 class="text-3xl mb-6 text-center">Eredmények</h2>
+  <h2 class="text-3xl mb-6 text-center">Jelenlegi eredmények</h2>
   <h3 class="text-xl mb-3 text-center"></h3>
   <div class="max-w-5xl mx-auto mb-6">
-    <p class="mb-6 text-center">
 
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Sok-sok próbálgatás, után az első eredményem amire igazán büszke vagyok. Természetesen, még nem tökéletes a rendszer, vannak hibák, de az irányt jól mutatja.
+      A legnagyobb pontatlanságot a növényzet okozza, de a nagyobb gyárépületek, a különleges formájú épületek, és az árnyékok is problémákat vetnek fel.
     </p>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Az ellenőrzés, eddig csak vizuálisan történt. A model alkalmazáskor az épületek helyzetét kb 2-3 pixel pontossággal visszaadja.
+      A bemeneti raszter felbontása 26cm/pixel, valamint a georeferálás pontatlanságát is figyelembe véve, kb 0.5-1 m vízszintes pontossággal lehet számolni.
+    </p>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Szeretném hangsúlyozni, hogy ez még nem egy kész állapot.
+      Igaz, az előzetes 2-5 méteres pontossági célt elértem, de még sok fejlesztési lehetőség van a projektel kapcsolatban.
+    </p>
+
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col mb-6">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_MLbest.png" alt="A jelenlegi legjobb modellem. A rózsaszín poligonok a betanított épületek, és jól látszódik, hogy a többi épületet is elég jól érzékeli." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        A jelenlegi legjobb modellem. A rózsaszín poligonok a "betanított" épületek, és jól látszódik, hogy a többi épületet is elég jól érzékeli.
+      </div>
+    </div>
+
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col mb-6">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_MLcomparison.png" alt="Különbség egy régebbi (zöld) és a legjobb (kék) modellem eredménye között. Egymáshoz viszonyítva különösképp látszódik a fejlődés." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        Különbség egy régebbi (zöld) és a legjobb (kék) modellem eredménye között. Egymáshoz viszonyítva különösképp látszódik a fejlődés.
+      </div>
+    </div>
+
+    <div class="gallery-item group overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer flex flex-col mb-6">
+      <div class="aspect-video overflow-hidden">
+        <img src="../images/workflow_screenshot_ML2015.png" alt="A meghatározott épületkontúrok egy 2015-ös ortofotóhoz viszonyítva. A pozíció szinte tökéletes, ami a változásdetektálás szempontjából nagyon jó hír." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
+      </div>
+      <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
+        A meghatározott épületkontúrok egy 2015-ös ortofotóhoz viszonyítva. A pozíció szinte tökéletes, ami a változásdetektálás szempontjából nagyon jó hír.
+      </div>
+    </div>
+
     <p class="mb-6 text-center">
       Amennyiben szeretne több információt megtudni erről a projektemről, bátran keressen az elérhetőségeim egyikén:
     </p>
@@ -164,28 +207,41 @@
   <div class="space-y-6">
     <div class="bg-gray-800 p-6 rounded-xl">
       <h3 class="text-xl mb-2">1. Előfeldolgozás</h3>
-      <p class="text-gray-400"></p>
+      <p class="text-gray-400">Hibák kezelése, resampling, percentilis vágás, normalizálás </p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
       <h3 class="text-xl mb-2">2. Vizuális interpretáció</h3>
-      <p class="text-gray-400"></p>
+      <p class="text-gray-400">Manuális annotáció, talán a legidőigényesebb folyamat.</p>
     </div>
 
 
     <div class="bg-gray-800 p-6 rounded-xl">
       <h3 class="text-xl mb-2">3. Modell tanítása</h3>
-      <p class="text-gray-400"></p>
+      <p class="text-gray-400">A tanítás intenzitás és nDSM sávokon történt.
+
+        Tile size: 512
+        Stride: 256
+        Buffer: 0
+
+        Architecture: unet
+        Encoder: resnet34
+        Weights imagenet
+
+        Batch size: 8
+        Epochs: 50
+        LR: 0.001
+        Val Split: 0.2</p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
-      <h3 class="text-xl mb-2">4. Validáció</h3>
+      <h3 class="text-xl mb-2">4. Model alkalmazása</h3>
       <p class="text-gray-400"></p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
       <h3 class="text-xl mb-2">5. Finomhangolás</h3>
-      <p class="text-gray-400"></p>
+      <p class="text-gray-400">Több sáv hozzáadása, paraméterek hangolása, már tanított modell finomhangolása </p>
     </div>
 
   </div>
