@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A debreceni villamoshálózat rekonstruálása</title>
+  <title>A debreceni villamoshálózat nyomvonalának rekonstruálása</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -29,10 +31,10 @@
 
   <div class="relative text-center px-4">
 
-    <h1 class="text-5xl font-bold mb-4">A debreceni villamoshálózat rekonstruálása</h1>
+    <h1 class="text-5xl font-bold mb-4">A debreceni villamoshálózat nyomvonalának rekonstruálása</h1>
 
     <p class="text-gray-200 mb-6">
-      A debreceni villamoshálózat rekonstruálása az 1970-es légifelvételek alapján
+      A debreceni villamoshálózat nyomvonalának rekonstruálása az 1970-es légifelvételek alapján.
     </p>
 
     <!-- SKILL TAGS -->
@@ -45,7 +47,9 @@
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Agisoft Metashape</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Georeferálás</span>
         <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Fotointerpretáció</span>
-        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200"></span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">QGIS</span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">Leaflet</span>
+        <span class="bg-gray-800/80 px-4 py-1 rounded-full text-sm text-gray-200">JS</span>
 
       </div>
     </div>
@@ -74,8 +78,13 @@
 <!-- DESCRIPTION -->
 <section class="p-10 max-w-5xl mx-auto">
   <h2 class="text-3xl mb-4">Projekt bemutatás</h2>
-  <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
-    Feltöltés alatt
+  <p class="text-gray-300 leading-relaxed mb-2">
+    Rövid, "kiegészítő" projekt Debrecen régi villamoshálózatáról.
+    A <a href="https://hu.wikipedia.org/w/index.php?title=Debrecen_villamosvonal-h%C3%A1l%C3%B3zata&stable=1"class="text-blue-400 hover:underline">Debrecen villamosvonal-hálózata</a> wikipédia szócikkben megtalálható kép hibásan jelent meg, de kíváncsi voltam a régi villamos nyomvonalakra, így magam digitalizáltam azt.
+    A későbbiekben persze megtaláltam a javított változatot <a href="https://hu.wikipedia.org/w/index.php?title=Debrecen_villamosvonal-h%C3%A1l%C3%B3zata&stable=0&redirect=no"class="text-blue-400 hover:underline">(a nem ellenőrzött változat alatt)</a>, és összehasonlítva a kettőt, gyanítom, hogy az is hasonló módszerrel készült.
+  </p>
+  <p class="text-gray-300 leading-relaxed mb-2">
+    A jövőben lehet hogy még visszatérek ehhez a munkámhoz és bővítem a megállóhelyekkel (hosszasabb helytörténeti kutatást igényel).
   </p>
 </section>
 
@@ -83,6 +92,11 @@
 <section class="p-10 bg-gray-800">
   <h2 class="text-3xl mb-6 text-center">Eredmények</h2>
   <h3 class="text-xl mb-3 text-center"></h3>
+  <div class="max-w-5xl mx-auto">
+    <div id="map" class="h-[90vh] w-full rounded-xl shadow-lg"></div>
+  </div>
+
+
   <div class="max-w-5xl mx-auto mb-6">
     <p class="mb-6 text-center">
 
@@ -101,11 +115,24 @@
 
 <!-- WORKFLOW -->
 <section class="p-10 max-w-4xl mx-auto">
-  <h2 class="text-3xl mb-6">Feldolgozási workflow</h2>
+  <h2 class="text-3xl mb-6">Munkafolyamat</h2>
 
-  <p class="text-3xl text-center text-gray-300 leading-relaxed mb-6">
-    Feltöltés alatt
-  </p>
+  <div class="space-y-6">
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">1. Ortofotó elkészítése</h3>
+      <p class="text-gray-400">Mozaikolás, georeferálás</p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">2. Feldolgozás QGIS-ben</h3>
+      <p class="text-gray-400">A nyomvonal vizuális digitalizálása</p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl">
+      <h3 class="text-xl mb-2">3. Kódolás</h3>
+      <p class="text-gray-400">A térképrétegek beágyazása, interaktív funkciók fejlesztése JavaScripttel </p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -139,6 +166,10 @@
 
   </div>
 </section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-textpath/leaflet.textpath.js"></script>
+<script src="proj_debtram_data/map2.js"></script>
 
 </body>
 </html>
