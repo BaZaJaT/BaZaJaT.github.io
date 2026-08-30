@@ -1,12 +1,13 @@
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImage');
-const modalCaption = document.getElementById('modalCaption'); // Új elem
+const modalCaption = document.getElementById('modalCaption');
 const closeBtn = document.getElementById('closeModal');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const images = Array.from(document.querySelectorAll('.gallery-img'));
 
 let currentIndex = 0;
+let isZoomed = false;
 
 // Kép és képaláírás frissítése
 function updateModalImage(index) {
@@ -14,16 +15,44 @@ function updateModalImage(index) {
     const currentImg = images[currentIndex];
 
     modalImg.src = currentImg.src;
-    // Beállítjuk az alt szöveget képaláírásnak (ha nincs alt, üresen hagyja)
     modalCaption.textContent = currentImg.alt || "";
 
-    // Ha nincs az adott képhez alt szöveg, elrejtjük a szürke dobozt
-    if(!currentImg.alt) {
+    if (!currentImg.alt) {
         modalCaption.classList.add('hidden');
     } else {
         modalCaption.classList.remove('hidden');
     }
+
+    resetZoom();
 }
+
+// Zoom be/ki
+function toggleZoom(e) {
+    e.stopPropagation();
+
+    if (!isZoomed) {
+        // Kiszámoljuk, hogy a kattintás hol történt a képen belül (%-ban)
+        const rect = modalImg.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+        modalImg.style.transformOrigin = `${x}% ${y}%`;
+        modalImg.classList.add('zoomed');
+        isZoomed = true;
+    } else {
+        modalImg.classList.remove('zoomed');
+        isZoomed = false;
+    }
+}
+
+// Zoom visszaállítása
+function resetZoom() {
+    isZoomed = false;
+    modalImg.classList.remove('zoomed');
+    modalImg.style.transformOrigin = 'center center';
+}
+
+modalImg.addEventListener('click', toggleZoom);
 
 // Megnyitás
 images.forEach((img, index) => {
@@ -38,6 +67,7 @@ images.forEach((img, index) => {
 function closeModal() {
     modal.classList.add('hidden');
     document.body.classList.remove('overflow-hidden');
+    resetZoom();
 }
 
 // Lapozás

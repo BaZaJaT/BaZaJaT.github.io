@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ortomozaikok</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #modalImage {
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    #modalImage.zoomed {
+      transform: scale(2.5);
+      cursor: zoom-out;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white">
 

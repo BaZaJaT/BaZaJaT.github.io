@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Épületkontúrok meghatározása archív légifelvételekből gépi tanulás segítségével</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #modalImage {
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    #modalImage.zoomed {
+      transform: scale(2.5);
+      cursor: zoom-out;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -156,6 +168,16 @@
       Az ellenőrzés, eddig csak vizuálisan történt. A model alkalmazáskor az épületek helyzetét kb 2-3 pixel pontossággal visszaadja.
       A bemeneti raszter felbontása 26cm/pixel, valamint a georeferálás pontatlanságát is figyelembe véve, kb 0.5-1 m vízszintes pontossággal lehet számolni.
     </p>
+    <p class="text-gray-300 leading-relaxed mb-6">Jelenlegi (2026-08-27) legjobb modellem:<br>
+    Architecture: unet<br>
+    Encoder: resnet34<br>
+    Total epochs: 50<br>
+    Best validation IoU: 0.9419<br>
+    Final validation IoU: 0.9368<br>
+    Final validation F1: 0.9669<br>
+    Final validation Precision: 0.9667<br>
+    Final validation Recall: 0.9676<br>
+    Final validation loss: 0.0639</p>
     <p class="text-gray-300 leading-relaxed mb-6">
       Szeretném hangsúlyozni, hogy ez még nem egy kész állapot.
       Igaz, az előzetes 2-5 méteres pontossági célt elértem, de még sok fejlesztési lehetőség van a projektel kapcsolatban.
@@ -166,7 +188,7 @@
         <img src="../images/workflow_screenshot_MLbest.png" alt="A jelenlegi legjobb modellem. A rózsaszín poligonok a betanított épületek, és jól látszódik, hogy a többi épületet is elég jól érzékeli." class="gallery-img w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105">
       </div>
       <div class="p-3 text-sm text-gray-300 bg-gray-900 text-center">
-        A jelenlegi legjobb modellem. A rózsaszín poligonok a "betanított" épületek, és jól látszódik, hogy a többi épületet is elég jól érzékeli.
+        Az egyik legjobb modellem. A rózsaszín poligonok a "betanított" épületek, és jól látszódik, hogy a többi épületet is elég jól érzékeli.
       </div>
     </div>
 
@@ -218,20 +240,7 @@
 
     <div class="bg-gray-800 p-6 rounded-xl">
       <h3 class="text-xl mb-2">3. Modell tanítása</h3>
-      <p class="text-gray-400">A tanítás intenzitás és nDSM sávokon történt.
-
-        Tile size: 512
-        Stride: 256
-        Buffer: 0
-
-        Architecture: unet
-        Encoder: resnet34
-        Weights imagenet
-
-        Batch size: 8
-        Epochs: 50
-        LR: 0.001
-        Val Split: 0.2</p>
+      <p class="text-gray-400">A tanítás intenzitás és nDSM sávokon történt.</p>
     </div>
 
     <div class="bg-gray-800 p-6 rounded-xl">
